@@ -47,6 +47,10 @@
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
     hyphens: auto;
+
+    @include respond(phone) {
+      column-count: 1;
+    }
   }
 
   &:target {
@@ -75,6 +79,12 @@
 
     &:hover {
       color: $color-primary;
+    }
+  }
+
+  @include respond(tab-port) {
+    &__left {
+      display: none;
     }
   }
 }
